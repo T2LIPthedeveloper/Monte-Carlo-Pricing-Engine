@@ -71,9 +71,9 @@ Monte Carlo Option Price: 7.89
 docker build -t monte-carlo-pricer .
 ```
 
-### **Run the Container**
+### **Run the Container (Interactive)**
 ```sh
-docker run --rm monte-carlo-pricer
+docker run --it --rm monte-carlo-pricer 
 ```
 
 ---
@@ -92,8 +92,7 @@ ctest --output-on-failure
 │   ├── monte_carlo.h      # Monte Carlo implementation
 │   ├── monte_carlo.cpp    # Pricing logic with GBM, multithreading
 │   ├── main.cpp           # CLI interface
-│   ├── utils.h/.cpp       # Helper functions (CSV, logging)
-│   ├── tests/             # Unit tests (GoogleTest)
+|── tests/                 # Unit tests (GoogleTest)
 │── CMakeLists.txt         # Build configuration
 │── Dockerfile             # Multi-stage Docker build
 │── README.md              # Documentation
